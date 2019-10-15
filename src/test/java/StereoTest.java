@@ -30,4 +30,16 @@ public class StereoTest {
         assertEquals("Walkman", stereo.getCassetteDeckModel());
     }
 
+    @Test
+    public void canAddRadioDeck() {
+        stereo.addRadio(radio);
+        assertEquals("R2D2", stereo.getRadioModel());
+    }
+
+    @Test
+    public void canPlayCassetteDeck() {
+        stereo.addCassetteDeck(cassetteDeck);
+        assertEquals("Born to Run is playing", stereo.playCassetteDeck("Born to Run"));
+    }
+
 }

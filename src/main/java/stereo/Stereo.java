@@ -1,6 +1,7 @@
 package stereo;
 
 import components.CassetteDeck;
+import components.Component;
 import components.Radio;
 
 public class Stereo {
@@ -21,11 +22,30 @@ public class Stereo {
         return name;
     }
 
-        public void addCassetteDeck(CassetteDeck cassetteDeck) {
-     this.cassetteDeck = cassetteDeck;
+    public void addCassetteDeck(CassetteDeck cassetteDeck) {
+        this.cassetteDeck = cassetteDeck;
     }
 
     public String getCassetteDeckModel() {
         return this.cassetteDeck.getModel();
     }
+
+    public void addRadio(Radio radio) {
+        this.radio = radio;
+    }
+
+    public String getRadioModel() {
+        return this.radio.getModel();
+    }
+
+    public String playCassetteDeck(String song) {
+        if (this.cassetteDeck != null) {
+        return this.cassetteDeck.play(song);
+        }
+        return "Cassette Deck is not connected.";
+    }
+
+//    public String checkRadioWorks(String station) {
+//        return this.radio.tune(station);
+//    }
 }
