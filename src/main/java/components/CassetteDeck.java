@@ -1,8 +1,8 @@
 package components;
 
-import behaviours.IPlay;
+import behaviours.IControlSongs;
 
-public class CassetteDeck extends Component implements IPlay {
+public class CassetteDeck extends Component implements IControlSongs {
 
     public CassetteDeck(String model, String make) {
         super(model, make);
